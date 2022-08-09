@@ -1,0 +1,130 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "Tier 1 radar",
+    "display_name": "!LOC:Tier 1 radar",
+    "description": "!LOC:Tier 1 radar - Detects nearby enemy land, sea, and air units.",
+    "max_health": 1500,
+    "build_metal_cost": 2400,
+    "consumption": {
+        "energy": 2000
+    },
+    "armor_type": "AT_Bot",
+    "energy_efficiency_requirement": 0.9,
+    "atrophy_rate": 80.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnySurface",
+    "area_build_type": "Sphere",
+    "area_build_separation": 200,
+    "buildable_types": "Custom4 & Custom3 & FactoryBuild & LaserPlatform & Advanced - Important",
+    "unit_types": [
+        "UNITTYPE_Land",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Recon",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Radar"
+    ],
+    "command_caps": [
+        "ORDER_FactoryBuild",
+        "ORDER_Attack"
+    ],
+        "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "physics": {
+        "collision_layers": "WL_AnySurface"
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 600,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 1200,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 600,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/addon/tier_1_radar/tier_1_radar.papa"
+        }
+    ],
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": 0.0
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/laser_defense_single_fire",
+            "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_muzzle"
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "fx_offsets": [
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_1_radar/tier_1_radar_dot.pfx",
+            "bone": "socket_pfx"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_1_radar/tier_1_radar_disk.pfx",
+            "bone": "socket_pfx_disk"
+        }
+    ],
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/radar"
+        }
+    },
+    "selection_icon": {
+        "diameter": 22.0
+    },
+    "mesh_bounds": [
+        38,
+        38,
+        18
+    ],
+    "TEMP_texelinfo": 19.7626
+}
