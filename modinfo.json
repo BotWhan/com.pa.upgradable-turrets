@@ -1,0 +1,26 @@
+ {
+	"identifier": "pa.mla.unit.upgradable-turrets",
+	"display_name": "Upgradable Turrets",
+	"description": "Turret upgrade trees",
+	"author": "Bot, Taiga",
+	"signature": "not yet implemented",
+	"forum": "",
+	"priority": 95,
+	"icon": "icon.png",
+	"titansOnly": true,
+	"category": [
+		"balance"
+	],
+	"scenes": {
+		"shared_build": [
+			"coui://ui/mods/pa.mla.unit.upgradable-turrets/shared_build.js"
+		],
+		"icon_atlas": [
+			"coui://ui/mods/pa.mla.unit.upgradable-turrets/icon_atlas.js"
+		]
+	},
+	"context": "server",
+	"date": "2022-08-08",
+	"build": "115958",
+	"version": "0.11.5"
+}
