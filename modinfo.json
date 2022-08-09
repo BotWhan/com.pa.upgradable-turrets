@@ -1,10 +1,10 @@
  {
 	"identifier": "pa.mla.unit.upgradable-turrets",
 	"display_name": "Upgradable Turrets",
-	"description": "Turret upgrade trees",
+	"description": "Upgradable Turrets is a mod that allows turrets to be build and ungraded upon a turret base. There are currently three turret trees: the Machine gun, the Cannon, and the Radar.",
 	"author": "Bot, Taiga",
 	"signature": "not yet implemented",
-	"forum": "",
+	"forum": "https://forums.planetaryannihilation.com/threads/upgradable-turrets.73589/",
 	"priority": 95,
 	"icon": "icon.png",
 	"titansOnly": true,
