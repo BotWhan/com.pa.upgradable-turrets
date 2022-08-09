@@ -6,7 +6,7 @@
 	"signature": "not yet implemented",
 	"forum": "https://forums.planetaryannihilation.com/threads/upgradable-turrets.73589/",
 	"priority": 95,
-	"icon": "icon.png",
+	"icon": "https://raw.githubusercontent.com/BotWhan/com.pa.upgradable-turrets/main/icon.png",
 	"titansOnly": true,
 	"category": [
 		"balance"
