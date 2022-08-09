@@ -9,7 +9,11 @@
 	"icon": "https://raw.githubusercontent.com/BotWhan/com.pa.upgradable-turrets/main/icon.png",
 	"titansOnly": true,
 	"category": [
-		"balance"
+	 "titans",
+   	 "in-game",
+   	 "server",
+  	 "unit",
+   	 "expansion"
 	],
 	"scenes": {
 		"shared_build": [
