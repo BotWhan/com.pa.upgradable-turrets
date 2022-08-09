@@ -1,0 +1,136 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_1_radar",
+    "display_name": "!LOC:Tier one radar",
+    "description": "!LOC:Kinda better than the regular t1 radar.",
+    "si_name": "tier_1_radar",
+    "max_health": 6000,
+    "build_metal_cost": 1000,
+    "armor_type": "AT_Bot",
+    "atrophy_rate": 10.0,
+    "atrophy_cool_down": 15.0,
+    "consumption": {
+        "energy": 1200
+    },
+    "buildable_types": "Custom4 & Custom3 & FactoryBuild & Radar - Important",
+    "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "tools": [
+        {
+            "spec_id": "/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base_build_arm.json",
+            "aim_bone": "bone_root"
+        }
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 3,
+    "unit_types": [
+        "UNITTYPE_Factory",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_FabBuild"
+    ],
+    "command_caps": [
+        "ORDER_FactoryBuild"
+    ],
+    "wreckage_health_frac": 0.0,
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 200,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 700,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 900,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 200,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 700,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/addon/tier_1_radar/tier_1_radar.papa"
+    },
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        }
+    },
+    "fx_offsets": [
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_1_radar/tier_1_radar_dot.pfx",
+            "bone": "socket_pfx"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_1_radar/tier_1_radar_disk.pfx",
+            "bone": "socket_pfx_disk"
+        }
+    ],
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Factory_contruction_loop_bot",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "selection_icon": {
+        "diameter": 50
+    },
+    "mesh_bounds": [
+        40,
+        40,
+        16
+    ],
+    "placement_size": [
+        43,
+        43
+    ],
+    "area_build_separation": 2,
+    "TEMP_texelinfo": 19.7626,
+    "physics": {
+        "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface"
+    }
+}
