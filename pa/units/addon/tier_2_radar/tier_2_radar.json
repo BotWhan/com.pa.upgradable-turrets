@@ -4,8 +4,8 @@
     "display_name": "!LOC:Tier two radar",
     "description": "!LOC:More vision + radar coverage.",
     "si_name": "tier_2_radar",
-    "max_health": 6000,
-    "build_metal_cost": 2400,
+    "max_health": 5000,
+    "build_metal_cost": 4000,
     "armor_type": "AT_Hover",
     "consumption": {
         "energy": 6000
