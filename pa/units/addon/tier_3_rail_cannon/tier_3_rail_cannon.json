@@ -71,7 +71,7 @@
             ]
         },
         {
-            "spec_id": "/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base_build_arm_2.json",
+            "spec_id": "/pa/units/addon/build_arms/tree_base_build_arm_2.json",
             "aim_bone": "bone_root"
         }
     ],
