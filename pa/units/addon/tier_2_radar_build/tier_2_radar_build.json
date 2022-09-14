@@ -4,8 +4,8 @@
     "display_name": "!LOC:Tier two radar",
     "description": "!LOC:More vision + radar coverage.",
     "si_name": "build",
-    "max_health": 6000,
-    "build_metal_cost": 3500,
+    "max_health": 5000,
+    "build_metal_cost": 400,
     "unit_types": [
         "UNITTYPE_FactoryBuild",
         "UNITTYPE_Radar",
@@ -36,12 +36,15 @@
         }
     },
     "navigation": {
-        "type": "land-small",
-        "acceleration": 100,
-        "brake": 100,
-        "move_speed": 10,
-        "turn_speed": 180,
-        "group_preference": "front"
+        "type": "air",
+        "acceleration": 0,
+        "brake": 0,
+        "move_speed": 0,
+        "turn_speed": 0,
+        "dodge_radius": 0,
+        "dodge_multiplier": 0.0,
+        "wobble_factor": 0.0,
+        "wobble_speed": 0.0
     },
     "model": {
         "filename": "/pa/units/addon/tier_2_radar_build/tier_2_radar_build.papa"
@@ -75,7 +78,9 @@
         0
     ],
     "TEMP_texelinfo": 35.3836,
+    "mesh_bounds": [0.01, 0.01, 0.01],
     "physics": {
-        "radius": 4.5
+        "radius": 0,
+        "add_to_spatial_db": false
     }
 }
