@@ -1,0 +1,126 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_2_machine_gun",
+    "display_name": "!LOC:Double Barreled Machine Gun",
+    "description": "!LOC:Twice the power of the first!",
+    "si_name": "tier_2_machine_gun",
+    "max_health": 4500,
+    "build_metal_cost": 1600,
+    "armor_type": "AT_Hover",
+    "atrophy_rate": 10.0,
+    "atrophy_cool_down": 15.0,
+    "buildable_types": "Custom4 & Custom3 & FactoryBuild & LaserPlatform & Basic & Defense- Important",
+    "rolloff_dirs": [
+        [
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 4,
+    "unit_types": [
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Land",
+        "UNITTYPE_Tank",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_CmdBuild",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Important"
+    ],
+    "command_caps": [
+        "ORDER_FactoryBuild",
+        "ORDER_Attack"
+    ],
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 170
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 170
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/addon/tier_2_machine_gun/tier_2_machine_gun.papa",
+        "animtree": "/pa/units/addon/tier_2_machine_gun/tier_2_machine_gun_anim_tree.json"
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/addon/tier_2_machine_gun/tier_2_machine_gun_tool_weapon.json",
+            "aim_bone": "bone_pitch",
+            "projectiles_per_fire": 3,
+            "muzzle_bone": [
+                "socket_centerMuzzle",
+                "socket_leftMuzzle",
+                "socket_rightMuzzle"
+            ]
+        },
+        {
+            "spec_id": "/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base_build_arm_2.json",
+            "aim_bone": "bone_root"
+        }
+    ],  
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/laser_defense_double_fire",
+            "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_rightMuzzle /pa/effects/specs/default_muzzle_flash.pfx socket_leftMuzzle"
+        }
+    },
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Factory_contruction_loop_bot",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "selection_icon": {
+        "diameter": 50
+    },
+    "mesh_bounds": [
+        29.5,
+        30.5,
+        15.2
+    ],
+    "placement_size": [
+        43,
+        43
+    ],
+    "area_build_separation": 2,
+    "physics": {
+        "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+        "allow_underground": true,
+        "type": "Structure"
+    },
+    "TEMP_texelinfo": 45
+}
