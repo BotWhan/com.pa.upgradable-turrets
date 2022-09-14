@@ -1,6 +1,6 @@
 var newBuild = {
     
-    "/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base.json": ["utility", 0, { row: 1, column: 0 }],
+    "/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base.json": ["hardpoint", 0, { row: 2, column: 0 }],
     
     
     "/pa/units/addon/tier_1_machine_gun_build/tier_1_machine_gun_build.json": ["tier 1", 0, { row: 2, column: 0 }],
