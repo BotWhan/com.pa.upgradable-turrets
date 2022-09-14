@@ -1,0 +1,219 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "Edison",
+    "display_name": "!LOC:Edison",
+    "description": "!LOC:AKA Big bug zapper.",
+    "si_name": "edison",
+    "max_health": 30000,
+    "build_metal_cost": 20000,
+    "armor_type": "AT_Bot",
+    "atrophy_rate": 80.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnySurface",
+    "area_build_type": "Sphere",
+    "area_build_separation": 200,
+    "unit_types": [
+        "UNITTYPE_Land",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Recon",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Radar"
+    ],
+    "physics": {
+        "collision_layers": "WL_AnySurface"
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 300
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/addon/edison/edison.papa"
+        }
+    ],
+    "events": {
+        "build_complete": {
+            "audio_cue": "/SE/Build_Complete/radar"
+        },
+        "died": {
+            "audio_cue": "/SE/Death/radar",
+            "effect_scale": 0.0
+        },
+        "fired": {
+            "effect_spec": "/pa/units/addon/edison/edison_lightning_fired.pfx socket_muzzle"
+        }
+    },
+    "fx_offsets": [
+        {
+            "filename": "/pa/units/addon/edison/edison_center_bulb.pfx",
+            "bone": "bone_pfx_0",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_aux_bulb.pfx",
+            "bone": "bone_pfx_1",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_aux_bulb.pfx",
+            "bone": "bone_pfx_2",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_aux_bulb.pfx",
+            "bone": "bone_pfx_3",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_4",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_5",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_6",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_7",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_8",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_9",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_10",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_11",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_12",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_13",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_14",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_15",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_dot.pfx",
+            "bone": "bone_pfx_16",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_dot.pfx",
+            "bone": "bone_pfx_17",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_dot.pfx",
+            "bone": "bone_pfx_18",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_19",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_20",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_21",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_22",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_23",
+            "type": "idle"
+        },
+        {
+            "filename": "/pa/units/addon/edison/edison_lightning.pfx",
+            "bone": "bone_pfx_24",
+            "type": "idle"
+        }
+    ],
+    "tools": [
+        {
+            "spec_id": "/pa/units/addon/edison/edison_tool_weapon.json",
+            "aim_bone": "socket_muzzle",
+            "muzzle_bone": [
+                "socket_muzzle"
+            ]
+        }
+    ],
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/radar"
+        }
+    },
+    "selection_icon": {
+        "diameter": 65
+    },
+    "mesh_bounds": [
+        50,
+        50,
+        50
+    ],
+    "TEMP_texelinfo": 37.4927
+}
