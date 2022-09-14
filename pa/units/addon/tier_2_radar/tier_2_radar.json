@@ -1,0 +1,144 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_2_radar",
+    "display_name": "!LOC:Tier two radar",
+    "description": "!LOC:More vision + radar coverage.",
+    "si_name": "tier_2_radar",
+    "max_health": 5000,
+    "build_metal_cost": 4000,
+    "armor_type": "AT_Hover",
+    "consumption": {
+        "energy": 6000
+    },
+    "energy_efficiency_requirement": 0.9,
+    "atrophy_rate": 80.0,
+    "atrophy_cool_down": 15.0,
+    "spawn_layers": "WL_AnySurface",
+    "area_build_type": "Sphere",
+    "area_build_separation": 200,
+    "unit_types": [
+        "UNITTYPE_Land",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Advanced",
+        "UNITTYPE_Recon",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Radar"
+    ],
+    "physics": {
+        "collision_layers": "WL_AnySurface"
+    },
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 500,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "surface_and_air",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 1300,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "orbital",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 2000,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 500,
+                    "uses_energy": true
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "radar",
+                    "shape": "capsule",
+                    "radius": 1200,
+                    "uses_energy": true
+                }
+            ]
+        }
+    },
+    "model": [
+        {
+            "layer": "WL_LandHorizontal",
+            "filename": "/pa/units/addon/tier_2_radar/tier_2_radar.papa"
+        }
+    ],
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "fx_offsets": [
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_dot.pfx",
+            "bone": "socket_pfx_1"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_dot.pfx",
+            "bone": "socket_pfx_2"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_dot.pfx",
+            "bone": "socket_pfx_3"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_dot.pfx",
+            "bone": "socket_pfx_4"
+        },        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_dot.pfx",
+            "bone": "socket_pfx_5"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/pfx/radar_poof.pfx",
+            "bone": "socket_pfx_6"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_2_radar/tier_2_radar_disk.pfx",
+            "bone": "socket_pfx_7"
+        },
+        {
+            "type": "energy",
+            "filename": "/pa/units/addon/tier_2_radar/tier_2_radar_rod_2.pfx",
+            "bone": "socket_pfx_9"
+        }
+    ],
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/radar"
+        }
+    },
+    "selection_icon": {
+        "diameter": 40.0
+    },
+    "mesh_bounds": [
+        8.58559,
+        7.71255,
+        29
+    ],
+    "TEMP_texelinfo": 76.6856
+}
