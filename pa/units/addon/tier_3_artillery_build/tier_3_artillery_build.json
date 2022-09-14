@@ -1,0 +1,89 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_3_artillery_build",
+    "display_name": "!LOC:Triple Artillery",
+    "description": "!LOC:Three Holkins are better than one.",
+    "si_name": "build",
+    "max_health": 9000,
+    "build_metal_cost": 22000,
+    "unit_types": [
+        "UNITTYPE_FactoryBuild",
+        "UNITTYPE_LaserPlatform",
+        "UNITTYPE_Artillery",
+        "UNITTYPE_Defense",
+        "UNITTYPE_Custom3",
+        "UNITTYPE_Custom4"
+    ],
+    "wreckage_health_frac": 0.0,
+    "death_weapon": {
+        "ground_ammo_spec": "/pa/units/addon/death_weapon/tier_2_death_weapon.json"
+    },
+    "spawn_unit_on_death": "/pa/units/addon/tier_3_artillery/tier_3_artillery.json",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 200
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 200
+                }
+            ]
+        }
+    },
+    "navigation": {
+        "type": "air",
+        "acceleration": 0,
+        "brake": 0,
+        "move_speed": 0,
+        "turn_speed": 0,
+        "dodge_radius": 0,
+        "dodge_multiplier": 0.0,
+        "wobble_factor": 0.0,
+        "wobble_speed": 0.0
+    },
+    "model": {
+        "filename": "/pa/units/addon/tier_3_artillery_build/tier_3_artillery_build.papa"
+    },
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        }
+    },
+    "tools": [
+        {
+            "aim_bone": "bone_root",
+            "muzzle_bone": "bone_root",
+            "record_index": 0,
+            "show_range": false,
+            "spec_id": "/pa/units/addon/extra/weapon_death.json"
+        }
+    ],
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "selection_icon": {
+        "diameter": 0
+    },
+    "placement_size": [
+        0,
+        0
+    ],
+    "TEMP_texelinfo": 15.5259,
+    "mesh_bounds": [0.01, 0.01, 0.01],
+    "physics": {
+        "radius": 0,
+        "add_to_spatial_db": false,
+        "allow_underground": true
+    }
+}
