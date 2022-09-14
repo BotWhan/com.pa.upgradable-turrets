@@ -1,0 +1,126 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_2_artillery",
+    "display_name": "!LOC:Cannon",
+    "description": "!LOC:Big ol' long gun. Kills medium health armies.",
+    "si_name": "tier_1_cannon",
+    "max_health": 8000,
+    "build_metal_cost": 1500,
+    "armor_type": "AT_Bot",
+    "atrophy_rate": 10.0,
+    "atrophy_cool_down": 15.0,
+    "buildable_types": "Custom4 & Custom3 & FactoryBuild & LaserPlatform & Defense & Advanced & Important",
+    "rolloff_dirs": [
+        [
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 4,
+    "unit_types": [
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Land",
+        "UNITTYPE_Tank",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_CmdBuild",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Important"
+    ],
+    "command_caps": [
+        "ORDER_FactoryBuild",
+        "ORDER_Attack"
+    ],
+    "guard_layer": "WL_AnySurface",
+    "wreckage_health_frac": 0.0,
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 110
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 110
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/addon/tier_2_artillery/tier_2_artillery.papa",
+        "animtree": "/pa/anim/anim_trees/defense_turret_single_anim_tree.json"
+    },
+    "nearby_target_tick_update_interval": 15,
+    "tools": [
+        {
+            "spec_id": "/pa/units/addon/tier_2_artillery/tier_2_artillery_tool_weapon.json",
+            "aim_bone": "bone_pitch",
+            "muzzle_bone": [
+                "socket_muzzle"
+            ]
+        },
+        {
+            "spec_id": "/pa/units/addon/build_arms/tree_base_build_arm_1.json",
+            "aim_bone": "bone_root"
+        }
+    ],
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/artillery_long_fire",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle /pa/effects/specs/artillery_muzzle_ground.pfx"
+        }
+    },
+    "audio": {
+        "loops": {
+            "build": {
+                "cue": "/SE/Construction/Factory_contruction_loop_bot",
+                "flag": "build_target_changed",
+                "should_start_func": "has_build_target",
+                "should_stop_func": "no_build_target"
+            }
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "selection_icon": {
+        "diameter": 53
+    },
+    "mesh_bounds": [
+        29.5,
+        30.5,
+        15.2
+    ],
+    "placement_size": [
+        43,
+        43
+    ],
+    "area_build_separation": 4,
+    "TEMP_texelinfo": 18.8606,
+    "physics": {
+        "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+        "allow_underground": true,
+        "type": "Structure"
+    }
+}

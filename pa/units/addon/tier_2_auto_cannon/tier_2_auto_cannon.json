@@ -1,0 +1,112 @@
+{
+    "base_spec": "/pa/units/land/base_structure/base_structure.json",
+    "unit_name": "tier_2_auto_cannon",
+    "display_name": "!LOC:Auto Cannon.",
+    "description": "!LOC:Faster, with less of a punch.",
+    "si_name": "tier_2_auto_cannon",
+    "max_health": 6500,
+    "build_metal_cost": 2900,
+    "armor_type": "AT_Hover",
+    "atrophy_rate": 10.0,
+    "atrophy_cool_down": 15.0,
+    "buildable_types": "Custom4 & Custom3 & FactoryBuild & LaserPlatform & Defense & Artillery",
+    "rolloff_dirs": [
+        [
+            0,
+            -1,
+            0
+        ]
+    ],
+    "wait_to_rolloff_time": 0,
+    "factory_cooldown_time": 4,
+    "unit_types": [
+        "UNITTYPE_Factory",
+        "UNITTYPE_Construction",
+        "UNITTYPE_Land",
+        "UNITTYPE_Tank",
+        "UNITTYPE_Structure",
+        "UNITTYPE_Basic",
+        "UNITTYPE_CmdBuild",
+        "UNITTYPE_FabBuild",
+        "UNITTYPE_FabAdvBuild",
+        "UNITTYPE_Important"
+    ],
+    "command_caps": [
+        "ORDER_FactoryBuild",
+        "ORDER_Attack"
+    ],
+    "guard_layer": "WL_AnySurface",
+    "recon": {
+        "observer": {
+            "items": [
+                {
+                    "layer": "surface_and_air",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 110
+                },
+                {
+                    "layer": "underwater",
+                    "channel": "sight",
+                    "shape": "capsule",
+                    "radius": 110
+                }
+            ]
+        }
+    },
+    "model": {
+        "filename": "/pa/units/addon/tier_2_auto_cannon/tier_2_auto_cannon.papa",
+        "animtree": "/pa/anim/anim_trees/defense_turret_single_anim_tree.json"
+    },
+    "tools": [
+        {
+            "spec_id": "/pa/units/addon/tier_2_auto_cannon/tier_2_auto_cannon_tool_weapon.json",
+            "aim_bone": "bone_pitch",
+            "muzzle_bone": [
+                "socket_muzzle"
+            ]
+        },
+        {
+            "spec_id": "/pa/units/addon/build_arms/tree_base_build_arm_2.json",
+            "aim_bone": "bone_root"
+        }
+    ],
+    "nearby_target_tick_update_interval": 15,
+    "events": {
+        "died": {
+            "audio_cue": "",
+            "effect_spec": "/pa/units/addon/pfx/death.pfx",
+            "effect_scale": -1
+        },
+        "fired": {
+            "audio_cue": "/SE/Weapons/structure/artillery_long_fire",
+            "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle /pa/effects/specs/artillery_muzzle_ground.pfx"
+        }
+    },
+    "death": {
+        "decals": [
+            "/pa/units/addon/pfx/decal.json"
+        ]
+    },
+    "audio": {
+        "selection_response": {
+            "cue": "/SE/Selection/structure/artillery"
+        }
+    },
+    
+    "selection_icon": {
+        "diameter": 53
+    },
+    "mesh_bounds": [
+        29.5,
+        30.5,
+        15.2
+    ],
+    "area_build_separation": 4,
+    "TEMP_texelinfo": 36.3223,
+    "physics": {
+        "collision_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+        "allow_underground": true,
+        "type": "Structure"
+    }
+}
