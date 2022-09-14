@@ -209,6 +209,7 @@
 
 		"/pa/units/addon/tree_hardpoint_base/tree_hardpoint_base.json",
         "/pa/units/addon/tree_hardpoint_base_legion/tree_hardpoint_base_legion.json",
+		"/pa/units/addon/tree_hardpoint_base_bug/tree_hardpoint_base_bug.json",
 
         "/pa/units/addon/tier_1_machine_gun/tier_1_machine_gun.json",
 		"/pa/units/addon/tier_1_machine_gun_build/tier_1_machine_gun_build.json",
