@@ -229,23 +229,13 @@
         "/pa/units/addon/tier_3_machine_gun/tier_3_machine_gun.json",
 		"/pa/units/addon/tier_3_machine_gun_build/tier_3_machine_gun_build.json",
 
-        "/pa/units/addon/tier_3_beamer/tier_3_beamer.json",
-		"/pa/units/addon/tier_3_beamer_build/tier_3_beamer_build.json",
 
         "/pa/units/addon/tier_3_rail_cannon/tier_3_rail_cannon.json",
         "/pa/units/addon/tier_3_rail_cannon_build/tier_3_rail_cannon_build.json",
-        
-        "/pa/units/addon/tree_rocket_base/tree_rocket_base.json",
-		"/pa/units/addon/tree_rocket_base_build/tree_rocket_base_build.json",
-
-        
-        "/pa/units/addon/tier_1_rocket/tier_1_rocket.json",
-		"/pa/units/addon/tier_1_rocket_build/tier_1_rocket_build.json",
+   
 
         "/pa/units/addon/tier_3_artillery/tier_3_artillery.json",
         "/pa/units/addon/tier_3_artillery_build/tier_3_artillery_build.json",
-
-        "/pa/units/addon/tier_3_aoe/tier_3_aoe.json",
 
 
         "/pa/units/addon/tier_1_radar/tier_1_radar.json",
@@ -255,7 +245,6 @@
         "/pa/units/addon/tier_2_radar/tier_2_radar.json",
         "/pa/units/addon/tier_2_radar_build/tier_2_radar_build.json",
         
-        "/pa/units/addon/tier_3_radar/tier_3_radar.json",
         
         "/pa/units/addon/edison/edison.json",
         "/pa/units/addon/edison_build/edison_build.json",
