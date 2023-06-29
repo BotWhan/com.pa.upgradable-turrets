@@ -30,9 +30,8 @@
         "UNITTYPE_Structure",
         "UNITTYPE_Basic",
         "UNITTYPE_FabBuild",
-
-
-        "UNITTYPE_Air"
+        "UNITTYPE_Air",
+        "UNITTYPE_Custom58"
     ],
     "command_caps": [
         "ORDER_FactoryBuild"
