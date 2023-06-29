@@ -31,6 +31,7 @@
         "UNITTYPE_Basic",
         "UNITTYPE_FabBuild",
         "UNITTYPE_Air",
+        "UNITTYPE_CmdBuild",
         "UNITTYPE_Custom58"
     ],
     "command_caps": [
